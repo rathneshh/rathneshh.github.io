@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rathneshwaran K. V.</title>
+<meta name="description" content="Biomedical engineering student building RideAlign, a wearable that corrects rider posture in real time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --plum-deep: #4a2c40;
+    --plum: #5c374c;
+    --peach: #ecc9a9;
+    --cream: #fdf0de;
+    --pink: #dfbcc0;
+    --sand: #e8d9cc;
+    --rule: #efd9bf;
+    --focus: #3f8f89;
+    --backdrop: #5a3a4f;
+    --backdrop-check: #523349;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; min-height: 100%; }
+
+  body {
+    font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    color: var(--plum-deep);
+    background-color: var(--backdrop);
+    background-image:
+      conic-gradient(var(--backdrop-check) 25%, transparent 0 50%, var(--backdrop-check) 0 75%, transparent 0);
+    background-size: 8px 8px;
+    display: flex;
+    justify-content: center;
+    padding: 48px 20px;
+  }
+
+  .window {
+    width: 100%;
+    max-width: 560px;
+    background: var(--cream);
+    border: 2px solid var(--peach);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    align-self: flex-start;
+  }
+
+  .titlebar {
+    background: var(--plum);
+    color: var(--peach);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 22px;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+  }
+
+  .dots { display: flex; gap: 10px; }
+  .dots span { width: 12px; height: 12px; border-radius: 50%; display: block; }
+  .dots span:nth-child(1) { background: var(--peach); }
+  .dots span:nth-child(2) { background: var(--pink); }
+  .dots span:nth-child(3) { background: var(--sand); }
+
+  .hero { padding: 40px 36px 36px; }
+
+  h1 {
+    margin: 0 0 22px;
+    font-size: clamp(3.2rem, 14vw, 5rem);
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .tagline {
+    margin: 0;
+    max-width: 44ch;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--plum);
+  }
+
+  hr { border: 0; border-top: 2px solid var(--rule); margin: 0; }
+
+  nav { padding: 32px 36px; display: grid; gap: 14px; }
+
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 20px 26px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--plum);
+    font-size: 1rem;
+    font-weight: 500;
+    transition: transform 0.15s ease;
+  }
+  .link svg { flex: none; width: 20px; height: 20px; transition: transform 0.15s ease; }
+  .link:hover svg { transform: translateX(4px); }
+
+  .link.l1 { background: var(--plum); color: var(--peach); }
+  .link.l2 { background: var(--peach); }
+  .link.l3 { background: var(--pink); }
+  .link.l4 { background: var(--sand); }
+
+  footer { padding: 28px 36px 36px; display: flex; gap: 14px; flex-wrap: wrap; }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    background: var(--peach);
+    color: var(--plum);
+    display: grid;
+    place-items: center;
+  }
+  .icon svg { width: 24px; height: 24px; }
+  .icon:hover { background: var(--pink); }
+
+  a:focus-visible {
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 480px) {
+    body { padding: 24px 12px; }
+    .hero, nav, footer { padding-left: 22px; padding-right: 22px; }
+    .link { padding: 18px 18px; font-size: 0.92rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .link, .link svg { transition: none; }
+  }
+</style>
+</head>
+<body>
+  <main class="window">
+    <header class="titlebar">
+      <span>Rathneshwaran K. V.</span>
+      <span class="dots" aria-hidden="true"><span></span><span></span><span></span></span>
+    </header>
+
+    <section class="hero">
+      <h1>Hello!</h1>
+      <p class="tagline">Biomedical engineering student building a wearable that corrects rider posture in real time.</p>
+    </section>
+
+    <hr>
+
+    <nav aria-label="Main links">
+      <!-- TODO: put your LinkedIn URL here -->
+      <a class="link l1" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/">
+        <span>01 / About me</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <!-- TODO: put your RideAlign Notion (or other) page URL here -->
+      <a class="link l2" href="https://www.notion.so/YOUR-RIDEALIGN-PAGE">
+        <span>02 / RideAlign (startup)</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <!-- TODO: replace YOUR-REPO-NAME with your simulation repo name -->
+      <a class="link l3" href="https://github.com/rathneshh/YOUR-REPO-NAME">
+        <span>03 / Spine simulation</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <!-- TODO: put your email address here -->
+      <a class="link l4" href="mailto:YOUR-EMAIL@example.com">
+        <span>04 / Get in touch</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </nav>
+
+    <hr>
+
+    <footer>
+      <a class="icon" href="mailto:YOUR-EMAIL@example.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </a>
+      <a class="icon" href="https://github.com/rathneshh" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+      </a>
+      <a class="icon" href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE/" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+      </a>
+    </footer>
+  </main>
+</body>
+</html>
